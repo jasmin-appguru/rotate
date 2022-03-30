@@ -15,7 +15,7 @@ jobs:
     - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
-          username: "CICD@rotate.clouddownunder.com.au"
+          username: "rotatecdu"
           host: "rotate.clouddownunder.com.au"
-          password: "n-0qa9*T]r3l"
+          password: "3V6$Rb6ttb9mWgR3"
           script: 'cd /home/rotatecdu/public_html/backend && ./server_deploy.sh'
