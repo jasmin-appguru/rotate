@@ -15,7 +15,9 @@ jobs:
     - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
-          username: "rotatecdu"
+          script_stop: true
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
           host: "rotate.clouddownunder.com.au"
-          password: "3V6$Rb6ttb9mWgR3"
           script: 'cd /home/rotatecdu/public_html/backend && ./server_deploy.sh'
